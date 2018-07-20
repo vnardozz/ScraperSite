@@ -58,7 +58,7 @@ the user also has the ability to add notes to their saved articles
 
 lastly, the user can delete a note if they no longer want to save that info to the article
 
-![alt text](screenshots/delete.png "click red 'x' ")
+![alt text](screenshots/delete.jpg "click red 'x' ")
 
 
 
