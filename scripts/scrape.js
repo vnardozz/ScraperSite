@@ -3,6 +3,7 @@ var cheerio = require("cheerio");
 
 var scrape = function(cb) {
   
+  // scrape nyt site for data 
   request("http://www.nytimes.com", function(err, res, body) {
    
     var $ = cheerio.load(body);
@@ -19,6 +20,7 @@ var scrape = function(cb) {
 
      if (head && sum && url) {
         
+        //regex use for formatting 
         var headNeat = head.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
         var sumNeat = sum.replace(/(\r\n|\n|\r|\t|\s+)/gm, " ").trim();
 

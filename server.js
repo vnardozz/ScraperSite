@@ -24,18 +24,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(router);
 
-var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-mongoose.connect(db, function(error) {
- 
-   if (error) {
-    console.log(error);
-  }
- 
-  else {
-    console.log("mongoose connection is successful");
-  }
-});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 app.listen(PORT, function() {
   console.log("Listening on port:" + PORT);

@@ -1,3 +1,5 @@
+
+// format and create day, month and year timestamp for JSON
 var makeDate = function(){
     var d = new Date()
     var dateFormatted = ""

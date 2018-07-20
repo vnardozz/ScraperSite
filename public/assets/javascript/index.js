@@ -1,10 +1,12 @@
 $(document).ready(function() {
     var articleContainer = $(".article-container");
+
+    //on clicks to scrape articles and save articles once scraped
     $(document).on("click", ".btn.save", handleArticleSave);
     $(document).on("click", ".scrape-new", handleArticleScrape);
   
     initPage();
-  
+    //load articles if already scraped or else give message that theres no        articles 
     function initPage() {
       articleContainer.empty();
       $.get("/api/headlines?saved=false").then(function(data) {
@@ -24,7 +26,7 @@ $(document).ready(function() {
       }
       articleContainer.append(articlePanels);
     }
-  
+      //create a panel for article to be rendered to with specfic scraped data 
     function createPanel(article) {
       var panel = $(
         [
@@ -48,7 +50,7 @@ $(document).ready(function() {
       panel.data("_id", article._id);
       return panel;
     }
-  
+      //in case no articles  have been scraped in the DB give a message to the    user 
     function renderEmpty() {
       var emptyAlert = $(
         [
@@ -68,7 +70,9 @@ $(document).ready(function() {
       );
       articleContainer.append(emptyAlert);
     }
-  
+      //put use to save article 
+
+      
     function handleArticleSave() {
       var articleToSave = $(this).parents(".panel").data();
       articleToSave.saved = true;
@@ -80,13 +84,23 @@ $(document).ready(function() {
   
         if (data.ok) {
           initPage();
+          bootbox.alert("Article Saved!" ).find('.modal-content').css({
+            'font-weight' : 'bold',
+            'color': '#3366ff',
+            'font-size': '2em',
+            'margin-top': function (){
+                var w = $(window).height();
+                var b = $(".modal-dialog").height();
+                var h = (w-b)/2;
+                return h+"px";
+            }
+        });
         }
       });
     }
-  
+    
     function handleArticleScrape() {
-  
-      $.get("/api/fetch").then(function(data) {
+        $.get("/api/fetch").then(function(data) {
         initPage();
         bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
       });

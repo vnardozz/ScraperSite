@@ -17,7 +17,7 @@ module.exports = function(router) {
 
       if (!docs || docs.insertedCount === 0) {
         res.json({
-          message: "No new articles today. Check back tomorrow!"
+          message: "No new articles yet. Try tomorrow!"
         });
       }
       else {
