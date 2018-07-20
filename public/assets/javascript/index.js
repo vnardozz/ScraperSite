@@ -69,6 +69,7 @@ $(document).ready(function() {
           "<br>",
           "<br>",
           "<br>",
+          "<br>",
         ].join("")
       );
       articleContainer.append(emptyAlert);
