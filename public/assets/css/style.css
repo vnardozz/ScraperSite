@@ -68,6 +68,44 @@ html {
   .jumbotron p {
     font-size: 30px;
   }
+  .grid-container{
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+
+
+  @media screen and (min-width: 600px){
+    .grid-container{
+      display: grid!important;
+      grid-template-columns: 1fr 1fr;
+
+      grid-gap: 40px;
+    }
+  }
+
+  .notes{
+background-color: #31B0D5;
+color: white;
+border-radius: 7px;
+border-width: 0px;
+font-size: 16px;
+padding: 7px;
+margin-right: 8px;
+box-shadow: 4px 4px grey;
+  }
+
+  
+  .delete{
+    background-color: #C9302C;
+    color: white;
+    border-radius: 7px;
+    border-width: 0px;
+    font-size: 16px;
+    padding: 7px;
+    margin-right: 8px;
+    box-shadow: 4px 4px grey;
+     
+  }
   
   .panel {
     border-radius: 0;
@@ -94,7 +132,6 @@ html {
   }
   
   .panel.panel-default .panel-heading .btn.delete {
-    right: 160px;
   }
   
   .panel.panel-default .panel-body {

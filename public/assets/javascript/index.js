@@ -75,9 +75,7 @@ $(document).ready(function() {
       articleContainer.append(emptyAlert);
     }
       //put use to save article 
-
-      
-    function handleArticleSave() {
+        function handleArticleSave() {
       var articleToSave = $(this).parents(".panel").data();
       articleToSave.saved = true;
         $.ajax({

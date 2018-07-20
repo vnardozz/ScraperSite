@@ -2,8 +2,8 @@ $(document).ready(function () {
   var articleContainer = $(".article-container");
 
   //on clicks for deleting articles, adding notes and deleting notes
-  $(document).on("click", ".btn.delete", handleArticleDelete);
-  $(document).on("click", ".btn.notes", handleArticleNotes);
+  $(document).on("click", ".delete", handleArticleDelete);
+  $(document).on("click", ".notes", handleArticleNotes);
   $(document).on("click", ".btn.save", handleNoteSave);
   $(document).on("click", ".btn.note-delete", handleNoteDelete);
 
@@ -37,20 +37,22 @@ $(document).ready(function () {
     var panel = $(
       [
         "<div class='panel panel-default'>",
-        "<div class='panel-heading'>",
-        "<h3>",
-        "<a class='article-link' target='_blank' href='" + article.url + "'>",
-        article.headline,
-        "</a>",
-        "<a class='btn btn-info delete'>",
-        "Delete From Saved",
-        "</a>",
-        "<a class='btn btn-danger notes'>Article Notes</a>",
-        "</h3>",
-        "</div>",
+          "<div class= 'panel-heading grid-container'>",
+            "<h3>",
+              "<a class='article-link' target='_blank' href='" + article.url + "'>",
+              article.headline,
+              "</a>",
+            "</h3>",
+            "<div style='text-align: right'>",
+              "<button class='delete'>",
+              "Delete From Saved",
+              "</button>",
+              "<button class=' notes'>Article Notes</button>",
+            "</div>",
+          "</div>",
         "<div class='panel-body'>",
-        article.summary,
-        "</div>",
+          article.summary,
+          "</div>",
         "</div>"
       ].join("")
     );
