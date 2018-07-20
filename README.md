@@ -19,9 +19,22 @@ on first load of the site the user is present with
 ![alt text](screenshots/intl.png "intial launch for user. Will not see again once Db has scraped articles")
 
 
+
+
+
+
+
+
+
 from here the user can scrape articles that are displayed on the home route
 
 ![alt text](screenshots/articles.png "articles are listed below for user to look through and save.")
+
+
+
+
+
+
 
 once saved, the user can go to the saved articles tab and view all the articles they have saved 
 
