@@ -16,4 +16,4 @@ to build a site where users can scrape articles from the New York Times. Then sa
 
 on first load of the site the user is present with 
 
-![alt text](screenshots\Screenshot(24).png "intial launch for user. Will not see again once Db has scraped articles")
+![alt text](screenshots\Screenshot (24).png "intial launch for user. Will not see again once Db has scraped articles")
