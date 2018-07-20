@@ -36,9 +36,32 @@ from here the user can scrape articles that are displayed on the home route
 
 
 
-once saved, the user can go to the saved articles tab and view all the articles they have saved 
+once saved, the user can go to the saved articles tab and view all the articles they have saved. 
+Articles can also be deleted from here.
 
-![alt text](screenshots/saved.png "articles are listed below for user to look through and save.")
+![alt text](screenshots/saved.png "articles are listed below for user to look through their saved articles.")
+
+
+
+
+
+
+the user also has the ability to add notes to their saved articles
+
+![alt text](screenshots/notes.png "articles are given a notes modal to add/delete notes.")
+
+
+
+
+
+
+
+lastly, the user can delete a note if they no longer want to save that info to the article
+
+![alt text](screenshots/delete.png)
+
+
+
 
 
 
