@@ -65,7 +65,10 @@ $(document).ready(function() {
           "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
           "<h4><a href='/saved'>Go to Saved Articles</a></h4>",
           "</div>",
-          "</div>"
+          "</div>",
+          "<br>",
+          "<br>",
+          "<br>",
         ].join("")
       );
       articleContainer.append(emptyAlert);
