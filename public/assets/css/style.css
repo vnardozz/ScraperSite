@@ -94,7 +94,7 @@ margin-right: 8px;
 box-shadow: 4px 4px grey;
   }
 
-  
+
   .delete{
     background-color: #C9302C;
     color: white;
@@ -131,9 +131,7 @@ box-shadow: 4px 4px grey;
     color: black;
   }
   
-  .panel.panel-default .panel-heading .btn.delete {
-  }
-  
+
   .panel.panel-default .panel-body {
     font-size: 16px;
     color: black;
